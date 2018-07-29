@@ -1,125 +1,116 @@
 // 1
-function fn(array) {
+function isAllTrue(array, fn) {  
 
-    for (i = 0; i < array.length; i = i + 1) {
-        console.log(`${i}: ${array[i]}, массив: [${array}]`);
+    if ((array === []) || (array instanceof Array === false)) {
+        throw new Error("empty array");
+    } else if (typeof fn !== 'function') {
+        throw new Error("fn is not a function");
+    }  
+
+    for (var i = 0; i < array.length; i++) {
+        if (!fn(array[i])) return false;
     }
+    return true;
 
 }
-
-function forEach(array, fn) {
-
-    return fn(array); 
-
-}
-
 
 // 2
-function map(array, fn, thisArg) {
-    
-    var newArray = [];
+function isSomeTrue(array, fn) {  
 
-    for (i = 0; i < array.length; i = i + 1){
-        newArray.push(fn.call(thisArg, array[i], i, array));
+    if ((array === []) || (array instanceof Array === false)) {
+        throw new Error("empty array");
+    } else if (typeof fn !== 'function') {
+        throw new Error("fn is not a function");
+    }  
+
+    for (var i = 0; i < array.length; i++) {
+        if (fn(array[i])) return true;
     }
-
-    return newArray;
+    return false;
 
 }
 
 // 3
-function reduce(array, fn, initial) {
+function returnBadArguments(fn,...rest) {
+
+    if (typeof fn !== 'function') {
+        throw new Error("fn is not a function");
+        }  
     
-    if (initial) {
+    try {
+        
+        var errorArray = [];
 
-        previousValue = initial;
-
-        for (i = 0; i < array.length; i = i + 1) {
-            var currentItem = array[i];
-            previousValue = fn.call(null, previousValue, currentItem, index, array);
-        }
-
-    } else {
-
-        previousValue = array[0];
-
-        for (i = 1; i < array.length; i = i + 1) {
-            currentItem = array[i];
-            previousValue = fn.call(null, previousValue, currentItem, index, array);
+        for (var i = 0; i < rest.length; i = i + 1) {
+            var nextArg = rest[i];
+            var result = fn(nextArg);
         }
 
     }
 
-    return previousValue;
+    catch (error) {
+
+        for (var e in error) {
+            errorArray.push(error.name);
+        }
+
+        return errorArray;
+    }
 
 }
 
 // 4
-function upperProps(obj) {
-    
-    var array = [];
-    var keys = Object.keys(obj);
+function calculator (number, ...rest){
 
-    for (var key of keys) {
-        array.push(key.toUpperCase());
+    if (typeof number !== 'number') {
+        throw new Error("number is not a number");
     }
 
-    return array;
-}
-
-
-// 5
-function slice(array, from, to) {
-
-    var newArray = [];
-
-    if (from >= 0 && to > 0) {
-
-        for (i = from; i < array.length - (array.length - (to)); i = i + 1) {
-            newArray.push(array[i]);
-        }
-
-    } else if (from < 0 && to > 0) {
-
-        for (i = (array.length - (-from)); i <  array.length - (array.length - (to)); i = i + 1) {
-            newArray.push(array[i]);
-        }
-
-    } else if (from < 0) {
-
-        for (i = (array.length - (-from)); i < array.length; i = i + 1) {
-            newArray.push(array[i]);
-        }
-
-    } else if (from > array.length) {
-
-        return newArray;
-
-    } else if (!from) {
-
-        for (i = 0;  i < array.length - (array.length - (to)); i = i + 1) {
-            newArray.push(array[i]);
-        }
+    var number = number || 0;
+    var sumTotal = number;
+    var difTotal = number;
+    var divTotal = number;
+    var mulTotal = number;
     
-    } else if (to < 0) {
+    for(var i = 0; i < rest.length; i = i + 1) {
 
-        for (i = from; i < array.length - to; i = i + 1) {
-            newArray.push(array[i]);
+        var arg = rest[i];
+
+        if (arg === 0) {
+            throw new Error("division by 0");
         } 
 
-    } else if ((from >= 0 && !to) || to > array.length) {
-
-        for (i = from; i < array.length; i = i + 1) {
-            newArray.push(array[i]);
-        }
-
-    } else if (!from && !to) {
-
-        for (i = 0; i < array.length; i = i + 1) {
-            newArray.push(array[i]);
-        }
+        sumTotal = sumTotal + arg;
+        difTotal = difTotal - arg;
+        divTotal = divTotal / arg;
+        mulTotal = mulTotal * arg;
 
     }
 
-    return newArray;
+    var sumMethod = function () {
+        return sumTotal
+    }
+
+    var difMethod = function () {
+        return difTotal
+    }
+
+    var divMethod = function () {
+        return Math.round(divTotal * 1000) / 1000;
+    }
+
+    var mulMethod = function () {
+        return mulTotal
+    }
+
+
+    var calcMethods = {
+        "sum": sumMethod(),
+        "dif": difMethod(),
+        "div": divMethod(),
+        "mul": mulMethod()
+    }
+
+    return calcMethods
+
 }
