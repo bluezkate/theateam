@@ -1,5 +1,10 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 .container {
-  width: 1050px;
+  width: 940px;
   margin: 0 auto; }
 
 .mishka {
@@ -136,3 +141,110 @@
   .mishka__nose-flang_right {
     border-right-color: transparent;
     right: 8px; }
+
+.flex {
+  padding: 19px;
+  padding-bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: space-between;
+      -ms-flex-line-pack: justify;
+          align-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  height: 864px;
+  background-color: #f3f3f3; }
+
+.flex__element {
+  width: 445px;
+  position: relative;
+  background-color: #ffffff;
+  margin-bottom: 20px; }
+  .flex__element:nth-child(1)::before {
+    position: absolute;
+    content: 'Хит продаж';
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: 'Roboto', serif;
+    font-size: 11px;
+    text-align: center;
+    width: 0;
+    height: 0;
+    right: 35px;
+    top: -10px;
+    border-width: 70px 37px 15px;
+    border-style: solid;
+    border-color: #35c6fd #35c6fd transparent; }
+  .flex__element:nth-child(3)::before {
+    position: absolute;
+    content: 'Акция';
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: 'Roboto', serif;
+    font-size: 11px;
+    text-align: center;
+    width: 0;
+    height: 0;
+    right: 35px;
+    top: -10px;
+    border-width: 70px 37px 15px;
+    border-style: solid;
+    border-color: #f30543 #f30543 transparent; }
+  .flex__element:nth-child(4)::before {
+    position: absolute;
+    content: 'Скидка 10%';
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: 'Roboto', serif;
+    font-size: 11px;
+    text-align: center;
+    width: 0;
+    height: 0;
+    right: 35px;
+    top: -10px;
+    border-width: 70px 37px 15px;
+    border-style: solid;
+    border-color: #f00643 #f00643 transparent; }
+
+.flex__heading {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #2d92be; }
+
+.flex__details {
+  padding: 20px 25px 30px; }
+
+.flex__trip-details {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: 'Roboto', serif;
+  font-weight: 300;
+  font-size: 11px;
+  color: #595b58; }
+  .flex__trip-details_bold {
+    font-weight: bold;
+    color: #252f60; }
+
+.flex__price {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+  color: #252f60; }
+  .flex__price_sale {
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 16px;
+    text-decoration: line-through;
+    color: #ececec; }
