@@ -1,0 +1,180 @@
+.mishka {
+    background-color: #51835d;
+}
+
+.mishka__figure {
+    margin: 0 auto;
+    padding: 100px 0px;
+}
+
+.mishka__head {
+    width: 210px;
+    height: 210px;
+
+    position: relative;
+    left: 40%;
+    top: 50%;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -84px;
+        left: 0;
+        width: 100%;
+        height: 140%;
+        background: #92806a;
+        border-radius: 80px 80px 0 0;
+        -webkit-transform-origin: 55% 100%;
+        -moz-transform-origin: 55% 100%;
+        -ms-transform-origin: 55% 100%;
+        -o-transform-origin: 55% 100%;
+        transform-origin: 55% 100%;
+        -webkit-transform: perspective(700px) rotateX(30deg);
+        -moz-transform:  perspective(700px) rotateX(30deg);
+        -ms-transform: perspective(700px) rotateX(30deg);
+        -o-transform: perspective(700px) rotateX(30deg);
+        transform: perspective(700px) rotateX(30deg);
+    }
+}
+
+.mishka__ear {
+    height: 90px;
+    width: 90px;
+
+    background-color: #92806a;
+    border-radius: 100px;
+
+    &_left, &_right {
+        position: absolute;
+    }
+
+    &_left {
+        top: -20px;
+        left: -30px;
+
+        &:before {
+            top: 20px;
+            left: 27px;
+        }
+    }
+
+    &_right {
+        top: -20px;
+        right: -30px;
+
+        &:before {
+            top: 22px;
+            left: 23px;
+        }
+    }
+
+    &_left:before, &_right:before {
+        content: '';
+        position: absolute;
+        width: 45px;
+        height: 45px;
+
+        background-color: #e3e2b6;
+        border-radius: 100px;
+    }
+}
+
+.mishka__eye {
+    width: 21px;
+    height: 15px;
+
+    border-radius: 70%/70%;
+    background-color: #000000;
+
+    &_left, &_right {
+        position: absolute;
+        z-index: 1;
+        top: 60px;
+    }
+
+    &_left {
+        left: 55px;
+    }
+
+    &_right {
+        left: 135px;
+    }
+
+
+    &_left:before, &_right:before {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 2px;
+
+        top: 4px;
+        right: 5px;
+
+        background-color: #ffffff;
+        border-radius: 100px;
+    }
+}
+
+.mishka__nose {
+    position: absolute;
+    left: 60px;
+    top: 60px;
+    z-index: 1;
+
+    width: 90px;
+    height: 110px;
+
+    background-color: #e3e2b6;
+    border-radius: 50px 50px 30px 30px;
+}
+
+.mishka__nosetip {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+
+    width: 50px;
+    height: 40px;
+
+    background-color: #000000;
+    border-radius: 20px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 5px;
+
+        top: 10px;
+        right: 12px;
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+}
+
+.mishka__nose-flang {
+    position: absolute;
+    z-index: -1;
+    top: 30px;
+    width: 40px;
+    height: 60px;
+
+    box-sizing: border-box;
+
+    background-color: transparent;
+    border: 7px solid #000000;
+    border-radius: 100%/50%;
+    border-top-color: transparent;
+
+    &_left {
+        border-left-color: transparent;
+        left: 8px;
+    }
+
+    &_right {
+        border-right-color: transparent;
+        right: 8px;
+    }
+
+}
+
