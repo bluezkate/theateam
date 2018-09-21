@@ -1,0 +1,45 @@
+.kitty {
+    width: 630px;
+    height: 320px;
+    margin: 0 auto;
+    position: relative;
+
+    background-image: url('/img/kitty__bg.jpg');
+    background-size: cover;
+
+    &:before, &:after {
+        position: absolute;
+        content: '';
+        width: 500px;
+        height: 150px;
+
+        bottom: 50px;
+    }
+
+    &:before {
+        z-index: 1;
+
+        left: 63px;
+
+        border-top: 3px solid #ffffff;
+    }
+
+    &:after {
+        z-index: 3;
+
+        left: 60px;
+
+        border: 3px solid #ffffff;
+        border-top: none;
+    }
+}
+
+.kitty__img {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    z-index: 2;
+
+    object-fit: contain;
+    object-position: 100px center;   
+}
