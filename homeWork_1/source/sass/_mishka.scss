@@ -15,27 +15,30 @@
     left: 40%;
     top: 50%;
 
-    // переделать голову тк тень ложится по основному контейнеру, а не по псевдоэлементу
-
     &:after {
         content: '';
         position: absolute;
-        top: -84px;
+        top: -58px;
         left: 0;
         width: 100%;
-        height: 140%;
+        height: 128%;
+        
+        -webkit-transform-origin: 45% 100%;
+        -moz-transform-origin: 45% 100%;
+        -ms-transform-origin: 45% 100%;
+        -o-transform-origin: 45% 100%;
+        transform-origin: 45% 100%;
+        -webkit-transform: perspective(1300px) rotateX(30deg);
+        -moz-transform:  perspective(1300px) rotateX(30deg);
+        -ms-transform: perspective(1300px) rotateX(30deg);
+        -o-transform: perspective(1300px) rotateX(30deg);
+        transform: perspective(1300px) rotateX(30deg);
+
         background: #92806a;
-        border-radius: 80px 80px 0 0;
-        -webkit-transform-origin: 55% 100%;
-        -moz-transform-origin: 55% 100%;
-        -ms-transform-origin: 55% 100%;
-        -o-transform-origin: 55% 100%;
-        transform-origin: 55% 100%;
-        -webkit-transform: perspective(700px) rotateX(30deg);
-        -moz-transform:  perspective(700px) rotateX(30deg);
-        -ms-transform: perspective(700px) rotateX(30deg);
-        -o-transform: perspective(700px) rotateX(30deg);
-        transform: perspective(700px) rotateX(30deg);
+        border-radius: 90px 80px 0 0;
+        -webkit-box-shadow: 0px 0px 39px 11px rgba(48,48,48,0.36);
+        -moz-box-shadow: 0px 0px 39px 11px rgba(48,48,48,0.36);
+        box-shadow: 0px 0px 39px 11px rgba(48,48,48,0.36);
     }
 }
 
@@ -46,24 +49,27 @@
     background-color: #92806a;
     border-radius: 100px;
 
+    -webkit-box-shadow: 0px 0px 39px 11px rgba(48,48,48,0.36);
+    -moz-box-shadow: 0px 0px 39px 11px rgba(48,48,48,0.36);
+    box-shadow: 0px 0px 39px 11px rgba(48,48,48,0.36);
 
     &_left, &_right {
         position: absolute;
     }
 
     &_left {
-        top: -20px;
+        top: -15px;
         left: -30px;
 
         &:before {
-            top: 20px;
-            left: 27px;
+            top: 22px;
+            left: 22px;
         }
     }
 
     &_right {
-        top: -20px;
-        right: -30px;
+        top: -30px;
+        right: -25px;
 
         &:before {
             top: 22px;
@@ -129,6 +135,10 @@
 
     background-color: #e3e2b6;
     border-radius: 50px 50px 30px 30px;
+
+    -webkit-box-shadow: 0px 0px 39px 11px rgba(48,48,48,0.36);
+    -moz-box-shadow: 0px 0px 39px 11px rgba(48,48,48,0.36);
+    box-shadow: 0px 0px 39px 11px rgba(48,48,48,0.36);
 }
 
 .mishka__nosetip {
@@ -140,15 +150,15 @@
     height: 40px;
 
     background-color: #000000;
-    border-radius: 20px;
+    border-radius: 19px;
 
     &:before {
         content: '';
         position: absolute;
-        width: 12px;
-        height: 5px;
+        width: 10px;
+        height: 3px;
 
-        top: 10px;
+        top: 11px;
         right: 12px;
         background-color: #ffffff;
         border-radius: 10px;
@@ -158,25 +168,44 @@
 .mishka__nose-flang {
     position: absolute;
     z-index: -1;
-    top: 30px;
-    width: 40px;
+    top: 32px;
+    width: 42px;
     height: 60px;
 
     box-sizing: border-box;
 
     background-color: transparent;
-    border: 7px solid #000000;
-    border-radius: 100%/50%;
+    border: 5px solid #000000;
+    border-bottom-left-radius: 45%;
+    border-bottom-right-radius: 45%;
     border-top-color: transparent;
 
+    &_left:before, &_right:before {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 40px;
+
+        top: -5px;
+
+        background-color: #e3e2b6;
+    }
+    
+
     &_left {
-        border-left-color: transparent;
-        left: 8px;
+        left: 6px;
+
+        &::before {
+            left: -9px;
+        }
     }
 
     &_right {
-        border-right-color: transparent;
-        right: 8px;
+        right: 6px;
+
+        &::before {
+            right: -9px;
+        }
     }
 
 }

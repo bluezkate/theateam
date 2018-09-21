@@ -2,13 +2,15 @@
     padding: 19px;
     padding-bottom: 0;
     display: flex;
-    align-content: space-between;
-    
-    // не уверена, что так нужно делать
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    height: 864px;
-
+    justify-content: space-between;
+    
+    // // 2й вариант, менее правильный, но без обертки
+    // height: 864px;
+    // flex-direction: column;
+    // align-content: space-between;
+    
     background-color: #f3f3f3;
 }
 
@@ -19,61 +21,62 @@
 
     margin-bottom: 20px;
 
-    &:nth-child(1)::before {
+    &_anapa::before, &_sochi::before, &_gelenjic::before {
         position: absolute;
-        content: 'Хит продаж';
-        text-transform: uppercase;
-        color: #ffffff;
-        font-family: 'Roboto', serif;
-        font-size: 11px;
-        text-align: center;
-
+        content: '';
 
         width: 0; 
         height: 0; 
+
         right: 35px;
         top: -10px;
         border-width: 70px 37px 15px;
         border-style: solid;
+    }
+
+    &_anapa::before {
         border-color: #35c6fd #35c6fd transparent;
     }
 
-    &:nth-child(3)::before {
-        position: absolute;
-        content: 'Акция';
-        text-transform: uppercase;
-        color: #ffffff;
-        font-family: 'Roboto', serif;
-        font-size: 11px;
-        text-align: center;
-
-
-        width: 0; 
-        height: 0; 
-        right: 35px;
-        top: -10px;
-        border-width: 70px 37px 15px;
-        border-style: solid;
+    &_sochi::before {
         border-color: #f30543 #f30543 transparent;
     }
 
-    &:nth-child(4)::before {
+    &_gelenjic::before {
+        border-color: #f00643 #f00643 transparent;
+    }
+
+    &_anapa::after, &_sochi::after, &_gelenjic::after {
         position: absolute;
-        content: 'Скидка 10%';
-        text-transform: uppercase;
+        display: inline-block;
+        width: 50px;
+        
         color: #ffffff;
         font-family: 'Roboto', serif;
         font-size: 11px;
         text-align: center;
+        text-transform: uppercase;
 
+        right: 46px;
+    }
 
-        width: 0; 
-        height: 0; 
-        right: 35px;
-        top: -10px;
-        border-width: 70px 37px 15px;
-        border-style: solid;
-        border-color: #f00643 #f00643 transparent;
+    
+    &_anapa::after {
+        content: 'Хит продаж';
+
+        top: 15px;
+    }
+
+    &_sochi::after {
+        content: 'Акция';
+
+        top: 22px;
+    }
+
+    &_gelenjic::after {
+        content: 'Скидка 10%';
+
+        top: 17px;
     }
 }
 
@@ -115,7 +118,8 @@
     font-size: 20px;
     color: #252f60;
 
-    &_sale {
+    &_sale:before {
+        content: '';
         display: inline-block;
         padding-left: 20px;
 
@@ -123,4 +127,29 @@
         text-decoration: line-through;
         color: #ececec;
     }
+}
+
+.flex__price-sale {
+    position: relative;
+
+    &_sochi:after, &_gelenjic:after{
+        position: absolute;
+        display: inline-block;
+
+        font-size: 14px;
+        text-decoration: line-through;
+        color: #cccccc;
+
+        top: 7px;
+        left: 130px;
+    }
+
+    &_sochi:after {
+        content: '15000 руб.'
+    }
+
+    &_gelenjic:after {
+        content: '10000 руб.'
+    }
+
 }

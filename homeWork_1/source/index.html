@@ -14,16 +14,19 @@
     <!-- Рука тянется к семантике, но что поделать, ТЗ есть ТЗ -->
     <div class="container">
         <div class="animation">
-            <p class="animation__text">
-                I'm a
-                <p class="animation__animated-text">
-                    <span>Panther</span>
-                    <span>Leopard</span>
-                    <span>Tiger</span>
-                    <span>Jaguar</span>
-                </p>
-                
-            </p>
+            <div class="animation__text">
+                <span class="animation__start-text">I'm a</span>
+                <div class="animation__animated-wrapper">
+                    <div class="animation__animated-list">
+                        <span  class="animation__animated-item">Panther</span>
+                        <span class="animation__animated-item">Leopard</span>
+                        <span class="animation__animated-item">Tiger</span>
+                        <span class="animation__animated-item">Jaguar</span>
+                        <span  class="animation__animated-item">Panther</span>
+                    </div>
+                </div>
+            </div>
+            
         </div>
         <div class="mishka">
             <div class="mishka__figure">
@@ -43,7 +46,8 @@
             </div>
         </div>
         <div class="flex">
-            <div class="flex__element">
+
+            <div class="flex__element flex__element_anapa">
                 <img class="flex__image" src="img/content-1.jpg" alt="Анапа">
                 
                 <div class="flex__details">
@@ -55,6 +59,43 @@
                     <p class="flex__price">49 000 руб.</p>
                 </div> 
             </div>
+
+            <div class="flex_wrapper">
+
+                <div class="flex__element flex__element_sochi">
+                    <img class="flex__image"  src="img/content-3.jpg" alt="Анапа">
+                    
+                    <div class="flex__details">
+                        <h5 class="flex__heading">Обзорная морская прогулка с экскурсией</h5>
+                        <p class="flex__trip-details">
+                            <span class="flex__trip-details_bold">Маршрут:</span> Сочи-Адлер-Сочи (без высадки)  <br>
+                            <span class="flex__trip-details_bold">Продолжительность:</span> 1 ч. 0 мин.
+                            
+                        </p>
+                        <p class="flex__price flex__price-sale flex__price-sale_sochi">
+                            5 000 руб. 
+                        </p>
+                    </div> 
+                </div>
+                <div class="flex__element flex__element_gelenjic">
+                    <img class="flex__image"  src="img/content-4.jpg" alt="Анапа">
+                    
+                    <div class="flex__details">
+                        <h5 class="flex__heading">Морская прогулка в Геленджик</h5> 
+                        <p class="flex__trip-details">
+                            <span class="flex__trip-details_bold">Маршрут:</span> Сочи-Туапсе-Геленджик <br>
+                            <span class="flex__trip-details_bold">Продолжительность:</span> 12 ч. 30 мин.
+                            
+                        </p>
+                        <p class="flex__price flex__price-sale flex__price-sale_gelenjic">
+                            7 000 руб.
+                        </p>
+                    </div> 
+                </div> 
+
+            </div>
+            
+
             <div class="flex__element">
                 <img class="flex__image"   src="img/content-2.jpg" alt="Новороссийск">
                 
@@ -67,38 +108,7 @@
                     <p class="flex__price">14 800 руб.</p>
                 </div> 
             </div>
-            <div class="flex__element">
-                <img class="flex__image"  src="img/content-3.jpg" alt="Анапа">
-                
-                <div class="flex__details">
-                    <h5 class="flex__heading">Обзорная морская прогулка с экскурсией</h5>
-                    <p class="flex__trip-details">
-                        <span class="flex__trip-details_bold">Маршрут:</span> Сочи-Адлер-Сочи (без высадки)  <br>
-                        <span class="flex__trip-details_bold">Продолжительность:</span> 1 ч. 0 мин.
-                        
-                    </p>
-                    <p class="flex__price">
-                        5 000 руб. 
-                        <span class="flex__price_sale">15000 руб.</span>
-                    </p>
-                </div> 
-            </div>
-            <div class="flex__element">
-                <img class="flex__image"  src="img/content-4.jpg" alt="Анапа">
-                
-                <div class="flex__details">
-                   <h5 class="flex__heading">Морская прогулка в Геленджик</h5> 
-                    <p class="flex__trip-details">
-                        <span class="flex__trip-details_bold">Маршрут:</span> Сочи-Туапсе-Геленджик <br>
-                        <span class="flex__trip-details_bold">Продолжительность:</span> 12 ч. 30 мин.
-                        
-                    </p>
-                    <p class="flex__price">
-                        7 000 руб.
-                        <span class="flex__price_sale">10000 руб.</span>
-                    </p>
-                </div> 
-            </div>
+            
             <div class="flex__element">
                 <img class="flex__image"  src="img/content-5.jpg" alt="Анапа">
                 
