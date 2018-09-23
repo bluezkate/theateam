@@ -2,6 +2,7 @@
     width: 630px;
     height: 320px;
     margin: 0 auto;
+    margin-bottom: 20px;
     position: relative;
 
     background-image: url('/img/kitty__bg.jpg');
@@ -40,6 +41,8 @@
     position: absolute;
     z-index: 2;
 
+    padding-top: 15px;
+
     object-fit: contain;
-    object-position: 100px center;   
+    object-position: 100px 0px;   
 }

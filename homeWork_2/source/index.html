@@ -13,21 +13,42 @@
         <section class="kitty">
             <img class="kitty__img" src="img/kitty__itself.png" alt="Kitty">
         </section>
+
         <section class="slider">
-            <div class="sloder__wrapper">
-                <input type="radio" name="slider" id="1">
-                <input type="radio" name="slider" id="2">
-                <input type="radio" name="slider" id="3">
+            <div class="slider__wrapper">
+
+                <label for="slider1" class="slider__button slider__button_purple"></label>
+                <label for="slider2" class="slider__button slider__button_blue"></label>
+                <label for="slider3" class="slider__button slider__button_green"></label>
+
+                <input type="radio" name="slider" id="slider1" class="slider__radio slider__radio_purple" checked>
+                <span class="radio-indication"></span>
+
+                <input type="radio" name="slider" id="slider2" class="slider__radio slider__radio_blue">
+                <span class="radio-indication"></span>
+
+                <input type="radio" name="slider" id="slider3" class="slider__radio  slider__radio_green">
+                <span class="radio-indication"></span>
+
+                <div class="slider__slides">
+                    <div class="slider__slide slider__slide_purple"></div>
+                    <div class="slider__slide slider__slide_blue"></div>
+                    <div class="slider__slide slider__slide_green"></div>
+                </div>
+
             </div>      
         </section>
+
         <section class="skew">
             <div class="skew__wrapper">
+                <div class="skew__pics">
+                    <div class="skew__pic_left"></div>
+                    <div class="skew__pic_right"></div> 
+                </div>
                 <p class="skew__seasons">
-                    <span>Summer</span>
-                    <span>Winter</span>
+                    <span class="skew__season">Summer</span>
+                    <span class="skew__season">Winter</span>
                 </p>
-                <div class="slew__pic_left"></div>
-                <div class="skew__pic_right"></div>
             </div>          
         </section>
     </div>      
