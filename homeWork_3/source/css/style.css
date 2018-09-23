@@ -1,0 +1,167 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.container {
+  margin: 0 auto;
+  width: 950px; }
+
+.slider__list {
+  margin: 0 auto;
+  padding: 0;
+  width: 450px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none; }
+
+.slider__item {
+  height: 450px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: uppercase; }
+  .slider__item:nth-child(2n+1) {
+    background-color: #34495E; }
+  .slider__item:nth-child(2n) {
+    background-color: #E67F22; }
+
+.slider__item:hover {
+  -webkit-box-flex: 3;
+  -webkit-flex-grow: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  -webkit-transition-duration: 700ms;
+       -o-transition-duration: 700ms;
+          transition-duration: 700ms; }
+
+.slider__item:hover .slider__text {
+  display: block;
+  margin: 0 auto;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  -webkit-animation-name: textFadeIn;
+          animation-name: textFadeIn;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms; }
+
+@-webkit-keyframes textFadeIn {
+  from {
+    opacity: 0.1; }
+  to {
+    opacity: 1; } }
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0.1; }
+  to {
+    opacity: 1; } }
+
+.slider__text {
+  display: none;
+  margin: 0;
+  padding: 0; }
+
+.tasklist {
+  padding: 50px 0;
+  background-color: #FDC331;
+  color: #526D81; }
+
+.tasklist__wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 30px;
+  width: 280px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #ffffff; }
+
+.tasklist__date {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  padding-bottom: 30px;
+  border-bottom: solid 1px #eeeeee; }
+
+.tasklist__day, .tasklist__monthYear {
+  display: block;
+  text-align: center; }
+
+.tasklist__day {
+  margin-bottom: 10px;
+  font-size: 23px;
+  font-weight: bold; }
+
+.tasklist__monthYear {
+  font-size: 12px; }
+
+.tasklist__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+.tasklist__item {
+  margin-bottom: 20px;
+  font-size: 14px; }
+  .tasklist__item:last-child {
+    margin-bottom: 0; }
+
+.tasklist__input {
+  display: none; }
+
+.tasklist__input + .checkbox-indication {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  right: 30px;
+  border: 1px solid #526D81;
+  -webkit-border-radius: 100px;
+          border-radius: 100px;
+  -webkit-animation-name: unchecked__popIn;
+          animation-name: unchecked__popIn;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out; }
+
+@-webkit-keyframes unchecked__popIn {
+  from {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); } }
+
+@keyframes unchecked__popIn {
+  from {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); } }
+
+.tasklist__input:focus + .checkbox-indication:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color; }
+
+.tasklist__input:checked + .checkbox-indication:before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 10px; }
+
+.tasklist__input:checked ~ .tasklist__text {
+  opacity: 0.3; }

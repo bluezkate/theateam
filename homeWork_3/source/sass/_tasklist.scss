@@ -1,0 +1,113 @@
+.tasklist {
+    padding: 50px 0;
+
+    background-color: #FDC331;
+    color: #526D81;
+}
+
+.tasklist__wrapper {
+    position: relative;
+    margin: 0 auto;
+    padding: 30px;
+    width: 280px;
+
+    box-sizing: border-box;
+
+    background-color: #ffffff;
+}
+
+.tasklist__date {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    padding-bottom: 30px;
+    border-bottom: solid 1px #eeeeee;
+}
+
+.tasklist__day, .tasklist__monthYear {
+    display: block;
+
+    text-align: center;
+}
+
+.tasklist__day {
+    margin-bottom: 10px;
+
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.tasklist__monthYear {
+    font-size: 12px;
+}
+
+.tasklist__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.tasklist__item {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.tasklist__input {
+    display: none;
+}
+
+.tasklist__input + .checkbox-indication {
+    position: absolute;
+
+    width: 13px;
+    height: 13px;
+
+    right: 30px;
+
+    border: 1px solid #526D81;
+    border-radius: 100px;
+
+    animation-name: unchecked__popIn;
+    animation-duration: 200ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes unchecked__popIn {
+    from {
+        transform: scale(0.9);
+    }
+
+    to { transform: scale(1.1);
+
+    }
+}
+
+.tasklist__input:focus + .checkbox-indication:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+
+
+.tasklist__input:checked + .checkbox-indication:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 10px;
+
+//     background-image: url('/img/icon__check.svg');
+//     stroke: #C8D4D9;
+//     fill: none;
+//     stroke-width: 1.5;
+//     stroke-dasharray: 30 30;
+//     stroke-dashoffset: 30;
+}
+
+.tasklist__input:checked ~ .tasklist__text {
+    opacity: 0.3;
+}

@@ -1,0 +1,65 @@
+.slider__list {
+    margin: 0 auto;
+    padding: 0;
+
+    width: 450px;
+
+    display: flex;
+
+    list-style-type: none;
+}
+
+.slider__item {
+    height: 450px;
+    box-sizing: border-box;
+    flex-grow: 1;
+
+    display: flex;
+
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    &:nth-child(2n+1) {
+        background-color: #34495E;
+    }
+
+    &:nth-child(2n) {
+        background-color: #E67F22;
+    }
+}
+
+.slider__item:hover {
+    flex-grow: 3;
+
+    transition-duration: 700ms;
+}
+
+.slider__item:hover .slider__text {
+    display: block;    
+    margin: 0 auto;
+
+    align-self: center;
+    animation-name: textFadeIn;
+    animation-duration: 500ms;
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+.slider__text {
+    display: none;
+
+    margin: 0;
+    padding: 0;
+}
