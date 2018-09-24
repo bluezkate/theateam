@@ -12,9 +12,9 @@ function changeToFirstSlide () {
 }
 
 function changeToSecondSlide () {
-    sliderList.style.transform="translateX(-960px)";
+    sliderList.style.transform="translateX(-886px)";
 }
 
 function changeToThirdSlide () {
-    sliderList.style.transform="translateX(-1920px)";
+    sliderList.style.transform="translateX(-1772px)";
 }
