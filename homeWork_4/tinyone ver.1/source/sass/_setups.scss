@@ -1,0 +1,22 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -2px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+$yellow: #fcdb00;

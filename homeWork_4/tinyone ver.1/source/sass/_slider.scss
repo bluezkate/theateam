@@ -1,0 +1,176 @@
+.slider {
+    padding-top: 60px;
+
+    background-color: $yellow;
+}
+
+.slider__wrapper {
+    overflow: hidden;
+}
+
+.slider__list {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    display: flex;
+    
+
+    transition: 1500ms cubic-bezier(.10, .10, .25, .90);
+}
+
+.slider__item {
+    display: flex;
+    min-width: 100%;
+}
+
+.slider__info {
+    margin-right: 155px;
+    padding-top: 65px;
+
+    width: 400px;
+}
+
+.slider__text {
+    margin: 0;
+    padding: 0;
+}
+
+.slider__heading {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
+    font-size: 32px;
+}
+
+.slider__lead { 
+    display: block;
+    margin-bottom: 25px;
+
+    width: 310px;
+
+    color: #313841;
+    font-size: 20px;
+}
+
+.slider__lorem-ipsum {
+    display: block;
+    margin-bottom: 45px;
+
+    color: #555555;
+    font-size: 16px;
+}
+
+.platforms__list {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+
+    list-style-type: none;    
+}
+
+.platforms__item {
+
+    margin-right: 38px;
+
+    &_apple {
+        width: 33px;
+        height: 39px;
+
+        background-image: url('/img/platform_apple.png');
+    }
+
+    &_android {
+        width: 33px;
+        height: 39px;
+
+        background-image: url('/img/platform_android.png');
+    }
+
+    &_windows {
+        width: 39px;
+        height: 40px;
+
+        background-image: url('/img/platform_windows.png');
+    }
+}
+
+.slider__img-wrapper {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+
+        width: 43px;
+        height: 43px;
+
+        left: 103px;
+        top: 200px;
+
+        background-image: url('/img/logo_yellow.png');
+    }
+
+    &::after {
+        content: 'tinyone';
+        position: absolute;
+
+        top: 202px;
+        right: 82px;
+
+        color: $yellow; 
+        font-size: 30px;
+        font-weight: 700;
+    }
+}
+
+.slider__img {
+    margin-left: 20px;
+}
+
+.slider__buttons {
+    margin: 0;
+    padding: 50px 0;
+
+    display: flex;
+    justify-content: center;
+
+    list-style-type: none;
+
+    background-color: $yellow;
+}
+
+
+.slider__button {
+    margin-right: 10px;
+    padding-left: 13px;
+
+    position: relative;
+    cursor: pointer;
+}
+
+
+// Switching standart radio to new
+.slider__radio + .radio-indication {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+
+    top: 0px;
+
+    border-radius: 10px; 
+    background-color: #ffffff;
+    opacity: 0.6;
+}
+
+.slider__radio:focus + .radio-indication {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.slider__radio:checked + .radio-indication {
+    opacity: 1;
+}

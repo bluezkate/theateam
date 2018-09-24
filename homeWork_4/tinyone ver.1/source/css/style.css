@@ -1,0 +1,209 @@
+body {
+  font-family: 'PT Sans', sans-serif; }
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 10px; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -2px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.header {
+  background-color: #fcdb00;
+  padding-top: 60px; }
+
+.header .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.logo__link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000000;
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none; }
+
+.logo__text {
+  margin-left: 10px; }
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.nav__item {
+  margin-left: 70px; }
+  .nav__item:last-child {
+    margin-right: 28px; }
+
+.nav__link {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none; }
+
+.slider {
+  padding-top: 60px;
+  background-color: #fcdb00; }
+
+.slider__wrapper {
+  overflow: hidden; }
+
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 1500ms cubic-bezier(0.1, 0.1, 0.25, 0.9);
+  -o-transition: 1500ms cubic-bezier(0.1, 0.1, 0.25, 0.9);
+  transition: 1500ms cubic-bezier(0.1, 0.1, 0.25, 0.9); }
+
+.slider__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 100%; }
+
+.slider__info {
+  margin-right: 155px;
+  padding-top: 65px;
+  width: 400px; }
+
+.slider__text {
+  margin: 0;
+  padding: 0; }
+
+.slider__heading {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 32px; }
+
+.slider__lead {
+  display: block;
+  margin-bottom: 25px;
+  width: 310px;
+  color: #313841;
+  font-size: 20px; }
+
+.slider__lorem-ipsum {
+  display: block;
+  margin-bottom: 45px;
+  color: #555555;
+  font-size: 16px; }
+
+.platforms__list {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none; }
+
+.platforms__item {
+  margin-right: 38px; }
+  .platforms__item_apple {
+    width: 33px;
+    height: 39px;
+    background-image: url("/img/platform_apple.png"); }
+  .platforms__item_android {
+    width: 33px;
+    height: 39px;
+    background-image: url("/img/platform_android.png"); }
+  .platforms__item_windows {
+    width: 39px;
+    height: 40px;
+    background-image: url("/img/platform_windows.png"); }
+
+.slider__img-wrapper {
+  position: relative; }
+  .slider__img-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    left: 103px;
+    top: 200px;
+    background-image: url("/img/logo_yellow.png"); }
+  .slider__img-wrapper::after {
+    content: 'tinyone';
+    position: absolute;
+    top: 202px;
+    right: 82px;
+    color: #fcdb00;
+    font-size: 30px;
+    font-weight: 700; }
+
+.slider__img {
+  margin-left: 20px; }
+
+.slider__buttons {
+  margin: 0;
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+  background-color: #fcdb00; }
+
+.slider__button {
+  margin-right: 10px;
+  padding-left: 13px;
+  position: relative;
+  cursor: pointer; }
+
+.slider__radio + .radio-indication {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: 0px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-color: #ffffff;
+  opacity: 0.6; }
+
+.slider__radio:focus + .radio-indication {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color; }
+
+.slider__radio:checked + .radio-indication {
+  opacity: 1; }
