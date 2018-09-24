@@ -1,0 +1,143 @@
+.slider {
+    margin-bottom: 110px;
+
+    background-color: $yellow;
+}
+
+.slider .container {
+    box-sizing: border-box;
+}
+
+.slider__wrapper {
+    overflow: hidden;
+}
+
+.slider__list {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    display: flex;
+    
+
+    transition: 1500ms cubic-bezier(.10, .10, .25, .90);
+}
+
+.slider__item {
+    padding: 140px 0 105px 0;
+    min-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.slider__text {
+    margin: 0;
+    padding: 0;
+}
+
+.slider__heading {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+
+    font-size: 48px;
+    text-align: center;
+}
+
+.slider__lorem-ipsum {
+    display: block;
+    margin-bottom: 30px;
+
+    width: 780px;
+
+    color: #313841;
+    font-size: 20px;
+    text-align: center;
+}
+
+.platforms__list {
+    margin: 0;
+    padding: 0;
+
+    width: 280px;
+
+    display: flex;
+    justify-content: space-between;
+
+    list-style-type: none;    
+}
+
+.platforms__item {
+
+    width: 70px;
+    height: 70px;
+
+    border: 2px solid #000000;
+    border-radius: 100px;
+    box-sizing: border-box;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &_apple {
+        background-image: url('/img/platform_apple.png');
+    }
+
+    &_android {
+        background-image: url('/img/platform_android.png');
+    }
+
+    &_windows {
+        background-image: url('/img/platform_windows.png');
+    }
+}
+
+.slider__buttons {
+    margin: 0;
+    margin-right: 20px;
+    padding: 54px 0;
+
+    display: flex;
+    justify-content: center;
+
+    list-style-type: none;
+
+    background-color: $yellow;
+}
+
+
+.slider__button {
+    margin-right: 15px;
+    padding-left: 5px;
+
+    position: relative;
+    cursor: pointer;
+}
+
+
+// Switching standart radio to new
+.slider__radio + .radio-indication {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+
+    top: -10px;
+    left: 15px;
+
+    border-radius: 10px; 
+    background-color: #ffffff;
+    opacity: 0.6;
+}
+
+.slider__radio:focus + .radio-indication {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.slider__radio:checked + .radio-indication {
+    opacity: 1;
+}
