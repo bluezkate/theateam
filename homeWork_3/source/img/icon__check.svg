@@ -1,3 +1,5 @@
 <svg width="15px" height="10px" >
-    <polyline points="1,5 6,9 14,1" />
+    <symbol id="check">
+        <polyline class="svg__check" points="1,5 6,9 14,1" />
+    </symbol>  
 </svg>

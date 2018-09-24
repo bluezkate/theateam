@@ -29,6 +29,11 @@
         </section>
 
         <section class="tasklist">
+            <svg width="15px" height="10px">
+                <symbol id="check">
+                    <polyline class="svg__check" points="1,5 6,9 14,1" />
+                </symbol>
+            </svg>
             <div class="tasklist__wrapper">
                 <p class="tasklist__date">
                     <span class="tasklist__day">Friday</span>
@@ -40,6 +45,12 @@
                             <input type="checkbox" name="tasklist" id="tasklistFirst" class="tasklist__input">
                             <span class="checkbox-indication"></span>
                             <span class="tasklist__text">Create a list</span> 
+                            <span class="checkbox__icon">
+                                <svg width="15px" height="10px">
+                                    <use xlink:href="#check"></use>
+                                </svg>  
+                            </span>
+                            
                         </label>
                     </li>
                     <li class="tasklist__item">
@@ -47,23 +58,38 @@
                             <input type="checkbox" name="tasklist" id="tasklistSecond" class="tasklist__input">
                             <span class="checkbox-indication"></span>
                             <span class="tasklist__text">Complete first task</span> 
+                            <span class="checkbox__icon">
+                                <svg width="15px" height="10px">
+                                    <use xlink:href="#check"></use>
+                                </svg>  
+                            </span>
                         </label> 
                     </li>
                     <li class="tasklist__item">
                         <label for="tasklistThird" class="tasklist__label">
                             <input type="checkbox" name="tasklist" id="tasklistThird" class="tasklist__input">
                             <span class="checkbox-indication"></span>
-                            <span class="tasklist__text">Write some CSS code</span> 
+                            <span class="tasklist__text">Write some CSS code</span>
+                            <span class="checkbox__icon">
+                               <svg width="15px" height="10px">
+                                    <use xlink:href="#check"></use>
+                                </svg>  
+                            </span>
+                            
                         </label>
                     </li>
                     <li class="tasklist__item">
                         <label for="tasklistFourth" class="tasklist__label">
                             <input type="checkbox" name="tasklist" id="tasklistFourth" class="tasklist__input">
                             <span class="checkbox-indication"></span>
-                            <span class="tasklist__text">Amaze the world</span> 
+                            <span class="tasklist__text">Amaze the world</span>
+                            <span class="checkbox__icon">
+                                <svg width="15px" height="10px">
+                                    <use xlink:href="#check"></use>
+                                </svg>  
+                            </span>
                         </label>
                     </li>   
-        
             </div>
         </section>
     </div>

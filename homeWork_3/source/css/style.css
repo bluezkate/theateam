@@ -5,7 +5,14 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 950px; }
+  width: 950px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.slider {
+  width: 450px; }
 
 .slider__list {
   margin: 0 auto;
@@ -58,6 +65,11 @@ body {
   -webkit-animation-duration: 500ms;
           animation-duration: 500ms; }
 
+.slider__text {
+  display: none;
+  margin: 0;
+  padding: 0; }
+
 @-webkit-keyframes textFadeIn {
   from {
     opacity: 0.1; }
@@ -70,13 +82,9 @@ body {
   to {
     opacity: 1; } }
 
-.slider__text {
-  display: none;
-  margin: 0;
-  padding: 0; }
-
 .tasklist {
   padding: 50px 0;
+  width: 100%;
   background-color: #FDC331;
   color: #526D81; }
 
@@ -130,38 +138,65 @@ body {
   border: 1px solid #526D81;
   -webkit-border-radius: 100px;
           border-radius: 100px;
-  -webkit-animation-name: unchecked__popIn;
-          animation-name: unchecked__popIn;
+  -webkit-animation-name: unchecked__popOut;
+          animation-name: unchecked__popOut;
   -webkit-animation-duration: 200ms;
           animation-duration: 200ms;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out; }
-
-@-webkit-keyframes unchecked__popIn {
-  from {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9); }
-  to {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1); } }
-
-@keyframes unchecked__popIn {
-  from {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9); }
-  to {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1); } }
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease; }
 
 .tasklist__input:focus + .checkbox-indication:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color; }
 
-.tasklist__input:checked + .checkbox-indication:before {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 10px; }
+.tasklist__input:active + .checkbox-indication {
+  -webkit-animation-name: unchecked__popIn;
+          animation-name: unchecked__popIn;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease; }
+
+.tasklist__input:checked + .checkbox-indication {
+  border: none; }
+
+.tasklist__input:checked ~ .checkbox__icon {
+  display: inline; }
 
 .tasklist__input:checked ~ .tasklist__text {
-  opacity: 0.3; }
+  opacity: 0.3;
+  -webkit-transition: 100ms ease;
+  -o-transition: 100ms ease;
+  transition: 100ms ease; }
+
+.checkbox__icon {
+  display: none;
+  position: absolute;
+  right: 30px; }
+
+.svg__check {
+  stroke: #C8D4D9;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-dasharray: 30 30;
+  stroke-dashoffset: 0; }
+
+@-webkit-keyframes unchecked__popIn {
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); } }
+
+@keyframes unchecked__popIn {
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); } }
+
+@-webkit-keyframes unchecked__popOut {
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); } }
+
+@keyframes unchecked__popOut {
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); } }

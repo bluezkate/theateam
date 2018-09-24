@@ -1,3 +1,7 @@
+.slider {
+    width: 450px;
+}
+
 .slider__list {
     margin: 0 auto;
     padding: 0;
@@ -45,6 +49,13 @@
     animation-duration: 500ms;
 }
 
+.slider__text {
+    display: none;
+
+    margin: 0;
+    padding: 0;
+}
+
 @keyframes textFadeIn {
     from {
         opacity: 0.1;
@@ -56,10 +67,3 @@
 }
 
 
-
-.slider__text {
-    display: none;
-
-    margin: 0;
-    padding: 0;
-}
