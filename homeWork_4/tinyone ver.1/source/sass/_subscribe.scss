@@ -17,9 +17,7 @@
 .subscribe__lorem-ipsum {
     margin: 0 auto;
     margin-bottom: 40px;
-    padding: 0;
-
-    width: 780px;
+    padding: 0 100px;
 
     color: #898989;
     font-size: 20px;
@@ -92,4 +90,45 @@
 
 .social__link {
     margin-right: 32px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .subscribe__heading {
+        margin-bottom: 30px;
+        padding: 0 30px;
+    }
+
+    .subscribe__lorem-ipsum {
+        padding: 0;
+    }
+
+    .subscribe__form {
+        margin-bottom: 50px;
+
+        flex-direction: column;
+    }
+
+    .subscribe__input, .subscribe__submit-button {
+        width: 100%;
+    }
+
+    .subscribe__input {
+        margin-bottom: 10px;
+    }
+
+    .subscribe__submit-button {
+        margin-left: 0;
+    }
+
+    .social__list {
+        margin-right: 0;
+    }
+
+    .social__link {
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
 }

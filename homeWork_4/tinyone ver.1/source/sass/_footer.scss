@@ -53,3 +53,34 @@
 
     text-decoration: none;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .footer {
+        padding-top: 0px;
+        padding-bottom: 50px;
+    }
+
+    .footer .container {
+        flex-direction: column;
+    }
+
+    .footer__adress {
+        margin-bottom: 30px;
+    }
+    
+    .footer__list {
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+    .footer__item {
+        margin-bottom: 10px;
+    }
+
+    .footer__item, .footer__item:nth-child(4n+4) {
+        margin-right: 0px;
+    }
+
+}

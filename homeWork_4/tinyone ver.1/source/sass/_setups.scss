@@ -1,9 +1,13 @@
+$yellow: #fcdb00;
+
 body {
     font-family: 'PT Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 .container {
-    width: 960px;
+    width: 950px;
+    padding: 0 10px;
     margin: 0 auto;
 }
 
@@ -18,4 +22,19 @@ body {
     overflow: hidden;
 }
 
-$yellow: #fcdb00;
+@media (max-width: 959px) {
+
+    .container {
+        width: 720px;
+        padding: 0 20px;
+    }
+    
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .container {
+        width: 280px;
+    }
+    
+}

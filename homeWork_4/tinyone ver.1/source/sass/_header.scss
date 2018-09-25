@@ -45,3 +45,35 @@
     font-weight: 700;
     text-decoration: none;
 }
+
+.header__menu-link {
+    display: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__menu-link {
+        position: relative;
+        display: block;
+
+        &:before {
+            content: '';
+            position: absolute;
+
+            width: 16px;
+            height: 19px;
+
+            top: -4px;
+
+            background-image: url('/img/header__menu.png');
+            background-repeat: no-repeat;
+        }
+        
+    }
+
+    
+}
