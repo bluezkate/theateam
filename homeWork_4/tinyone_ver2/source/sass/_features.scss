@@ -47,7 +47,8 @@
         left: 83px;
         top: 220px;
 
-        background-image: url('/img/logo_black.png');
+        background-image: url('/img/logo_black@1x.png');
+        background-size: 43px auto;
     }
 
     &::after {
@@ -103,6 +104,11 @@
     color: #898989;
 }
 
+@media (min-resolution: 2dppx) {
+    .features__img-wrapper:before {
+        background-image: url('/img/logo_black@2x.png');
+    }
+}
 
 @media (max-width: 1023px) {
 

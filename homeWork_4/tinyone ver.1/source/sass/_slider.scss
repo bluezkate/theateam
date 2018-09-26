@@ -85,21 +85,24 @@
         width: 33px;
         height: 39px;
 
-        background-image: url('/img/platform_apple.png');
+        background-image: url('/img/platform_apple@1x.png');
+        background-size: 33px auto;
     }
 
     &_android {
         width: 33px;
         height: 39px;
 
-        background-image: url('/img/platform_android.png');
+        background-image: url('/img/platform_android@1x.png');
+        background-size: 33px auto;
     }
 
     &_windows {
         width: 39px;
         height: 40px;
 
-        background-image: url('/img/platform_windows.png');
+        background-image: url('/img/platform_windows@1x.png');
+        background-size: 39px auto;
     }
 }
 
@@ -116,7 +119,8 @@
         left: 103px;
         top: 200px;
 
-        background-image: url('/img/logo_yellow.png');
+        background-image: url('/img/logo_yellow@1x.png');
+        background-size: 43px auto;
     }
 
     &::after {
@@ -184,6 +188,29 @@
 
 .slider__radio:checked + .radio-indication {
     opacity: 1;
+}
+
+@media (min-resolution: 2dppx) {
+
+    .platforms__item {
+    
+        &_apple {
+            background-image: url('/img/platform_apple@2x.png');
+        }
+    
+        &_android {
+            background-image: url('/img/platform_android@2x.png');
+        }
+    
+        &_windows {
+            background-image: url('/img/platform_windows@2x.png');
+        }
+    }
+
+
+    .slider__img-wrapper::before {
+        background-image: url('/img/logo_yellow@2x.png');
+    }
 }
 
 

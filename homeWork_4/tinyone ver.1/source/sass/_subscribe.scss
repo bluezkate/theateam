@@ -70,26 +70,48 @@
 .social__item {
     width: 36px;
     height: 36px;
+    background-size: 36px auto;
 
     &_facebook {
-        background-image: url('/img/social_facebook.png');
+        background-image: url('/img/subscribe__social_facebook@1x.png');
     }
 
     &_twitter {
-        background-image: url('/img/social_twitter.png');
+        background-image: url('/img/subscribe__social_twitter@1x.png');
     }
 
     &_google {
-        background-image: url('/img/social_google.png');
+        background-image: url('/img/subscribe__social_google@1x.png');
     }
 
     &_pinterest {
-        background-image: url('/img/social_pinterest.png');
+        background-image: url('/img/subscribe__social_pinterest@1x.png');
     }
 }
 
 .social__link {
     margin-right: 32px;
+}
+
+@media (min-resolution: 2dppx) {
+    .social__item {
+    
+        &_facebook {
+            background-image: url('/img/subscribe__social_facebook@2x.png');
+        }
+    
+        &_twitter {
+            background-image: url('/img/subscribe__social_twitter@2x.png');
+        }
+    
+        &_google {
+            background-image: url('/img/subscribe__social_google@2x.png');
+        }
+    
+        &_pinterest {
+            background-image: url('/img/subscribe__social_pinterest@2x.png');
+        }
+    }
 }
 
 @media (max-width: 1023px) {

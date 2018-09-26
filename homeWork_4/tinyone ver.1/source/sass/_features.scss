@@ -43,39 +43,45 @@
     width: 300px;
 
     &_mobile {
-        background-image: url('/img/features_mobile.png');
+        background-image: url('/img/features_mobile@1x.png');
         background-repeat: no-repeat;
         background-position: 15px 0;
+        background-size: 33px auto;
     }
 
     &_lemon {
-        background-image: url('/img/features_lemon.png');
+        background-image: url('/img/features_lemon@1x.png');
         background-repeat: no-repeat;
         background-position: 20px 0;
+        background-size: 43px auto;
     }
 
     &_folder {
-        background-image: url('/img/features_folder.png');
+        background-image: url('/img/features_folder@1x.png');
         background-repeat: no-repeat;
         background-position: 20px 0;
+        background-size: 47px auto;
     }
 
     &_code {
-        background-image: url('/img/features_code.png');
+        background-image: url('/img/features_code@1x.png');
         background-repeat: no-repeat;
         background-position: 5px 5px;
+        background-size: 52px auto;
     }
 
     &_envelope {
-        background-image: url('/img/features_envelope.png');
+        background-image: url('/img/features_envelope@1x.png');
         background-repeat: no-repeat;
         background-position: 16px 4px;
+        background-size: 51px auto;
     }
 
     &_mark {
-        background-image: url('/img/features_mark.png');
+        background-image: url('/img/features_mark@1x.png');
         background-repeat: no-repeat;
         background-position: 22px 0;
+        background-size: 36px auto;
     }
 }
 
@@ -93,6 +99,35 @@
 
     font-size: 16px;
     color: #898989;
+}
+
+@media (min-resolution: 2dppx) {
+    .features__item {
+    
+        &_mobile {
+            background-image: url('/img/features_mobile@2x.png');
+        }
+    
+        &_lemon {
+            background-image: url('/img/features_lemon@2x.png');
+        }
+    
+        &_folder {
+            background-image: url('/img/features_folder@2x.png');
+        }
+    
+        &_code {
+            background-image: url('/img/features_code@2x.png');
+        }
+    
+        &_envelope {
+            background-image: url('/img/features_envelope@2x.png');
+        }
+    
+        &_mark {
+            background-image: url('/img/features_mark@2x.png');
+        }
+    }
 }
 
 @media (max-width: 1023px) {

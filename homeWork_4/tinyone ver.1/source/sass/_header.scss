@@ -77,11 +77,17 @@
             top: -5px;
             right: 0;
 
-            background-image: url('/img/header__menu.png');
+            background-image: url('/img/header__menu@1x.png');
             background-repeat: no-repeat;
+            background-size: 16px auto;
         }
         
     }
 
+    @media (min-resolution: 2dppx) {
+        .header__menu-link:before {
+            background-image: url('/img/header__menu@2x.png');
+        }
+    }
     
 }

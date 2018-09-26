@@ -17,8 +17,9 @@
     width: 19px;
     height: 20px;
 
-    background-image: url('/img/header__menu.png');
+    background-image: url('/img/header__menu@1x.png');
     background-repeat: no-repeat;
+    background-size: 19px auto;
 }
 
 .header__logo {
@@ -59,25 +60,50 @@
 .social__item {
     width: 19px;
     height: 20px;
+    background-size: 19px auto;
 
     &_facebook {
-        background-image: url('/img/social_facebook.png');
+        background-image: url('/img/header__social_facebook@1x.png');
         background-repeat: no-repeat;
     }
 
     &_twitter {
-        background-image: url('/img/social_twitter.png');
+        background-image: url('/img/header__social_twitter@1x.png');
         background-repeat: no-repeat;
     }
 
     &_google {
-        background-image: url('/img/social_google.png');
+        background-image: url('/img/header__social_google@1x.png');
         background-repeat: no-repeat;
     }
 
     &_pinterest {
-        background-image: url('/img/social_pinterest.png');
+        background-image: url('/img/header__social_pinterest@1x.png');
         background-repeat: no-repeat;
+    }
+}
+
+@media (min-resolution: 2dppx) {
+    .header__icon-menu {
+        background-image: url('/img/header__menu@2x.png');
+    }
+
+    .social__item {
+        &_facebook {
+            background-image: url('/img/header__social_facebook@2x.png');
+        }
+    
+        &_twitter {
+            background-image: url('/img/header__social_twitter@2x.png');
+        }
+    
+        &_google {
+            background-image: url('/img/header__social_google@2x.png');
+        }
+    
+        &_pinterest {
+            background-image: url('/img/header__social_pinterest@2x.png');
+        }
     }
 }
 

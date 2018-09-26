@@ -80,20 +80,20 @@
     border: 2px solid #000000;
     border-radius: 100px;
     box-sizing: border-box;
-    background-size: 40%;
+    background-size: 40% auto;
     background-repeat: no-repeat;
     background-position: center center;
 
     &_apple {
-        background-image: url('/img/platform_apple.png');
+        background-image: url('/img/platform_apple@1x.png');
     }
 
     &_android {
-        background-image: url('/img/platform_android.png');
+        background-image: url('/img/platform_android@1x.png');
     }
 
     &_windows {
-        background-image: url('/img/platform_windows.png');
+        background-image: url('/img/platform_windows@1x.png');
     }
 }
 
@@ -141,6 +141,22 @@
 
 .slider__radio:checked + .radio-indication {
     opacity: 1;
+}
+
+@media (min-resolution: 2dppx) {
+    .platforms__item {
+        &_apple {
+            background-image: url('/img/platform_apple@2x.png');
+        }
+    
+        &_android {
+            background-image: url('/img/platform_android@2x.png');
+        }
+    
+        &_windows {
+            background-image: url('/img/platform_windows@2x.png');
+        }
+    }
 }
 
 @media (max-width: 1023px) {
