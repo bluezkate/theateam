@@ -12,9 +12,33 @@ function changeToFirstSlide () {
 }
 
 function changeToSecondSlide () {
-    sliderList.style.transform="translateX(-950px)";
+    switch (true) {
+        case (document.body.offsetWidth > 1023):
+            sliderList.style.transform="translateX(-930px)";
+            break;
+        case (document.body.offsetWidth > 767):
+            sliderList.style.transform="translateX(-720px)";
+            break;
+        case (document.body.offsetWidth > 0):
+            sliderList.style.transform="translateX(-280px)";
+            break; 
+        default:
+            sliderList.style.transform="translateX(-930px)";
+    }
 }
 
 function changeToThirdSlide () {
-    sliderList.style.transform="translateX(-1900px)";
+    switch (true) {
+        case (document.body.offsetWidth > 1023):
+            sliderList.style.transform="translateX(-1860px)";
+            break;
+        case (document.body.offsetWidth > 767):
+            sliderList.style.transform="translateX(-1440px)";
+            break;
+        case (document.body.offsetWidth > 0):
+            sliderList.style.transform="translateX(-560px)";
+            break; 
+        default:
+            sliderList.style.transform="translateX(-1860px)";
+    }
 }

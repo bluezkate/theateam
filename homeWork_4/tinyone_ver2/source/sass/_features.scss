@@ -102,3 +102,63 @@
     font-size: 17px;
     color: #898989;
 }
+
+
+@media (max-width: 1023px) {
+
+    .features {
+        margin-bottom: 50px;
+    }    
+
+    .features__lorem-ipsum {
+        margin-bottom: 600px;
+        padding: 0 40px;
+        box-sizing: border-box;
+
+        width: 100%;
+    }
+
+    .features__img-wrapper {
+        margin-top: -390px;
+    }
+    // Или скрыть айпад в принципе
+
+    .features__list {
+        padding: 0 50px;
+    }
+    
+}
+
+@media (max-width: 767px) {
+
+    .features {
+        margin-bottom: 50px;
+    }
+
+    .features__heading {
+        margin-bottom: 20px;
+    }
+
+    .features__lorem-ipsum {
+        margin-bottom: 50px;
+
+        font-size: 17px;
+    }
+
+    .features__img-wrapper {
+       display: none;
+    }
+
+    .features__list {
+        padding: 0 35px;
+
+        max-height: none;
+    }
+
+    .features__item {
+        margin-bottom: 50px;
+
+        text-align: center;
+    }
+    
+}

@@ -1,5 +1,5 @@
 .subscribe {
-    padding: 90px 0 75px 0;
+    padding: 90px 0 90px 0;
 
     background-color: #000000;
 }
@@ -17,9 +17,7 @@
 .subscribe__lorem-ipsum {
     margin: 0 auto;
     margin-bottom: 40px;
-    padding: 0;
-
-    width: 780px;
+    padding: 0 100px;
 
     color: #898989;
     font-size: 20px;
@@ -54,4 +52,48 @@
     background-color: $yellow;
     border: none;
     border-radius: 5px;
+}
+
+@media (max-width: 1023px) {
+
+    .subscribe {
+        padding-bottom: 30px;
+    }
+
+    .subscribe__form {
+        padding: 0 45px 45px;
+    }
+
+    
+}
+
+@media (max-width: 767px) {
+    
+    .subscribe__heading {
+        margin-bottom: 30px;
+        padding: 0 30px;
+    }
+
+    .subscribe__lorem-ipsum {
+        padding: 0;
+    }
+
+    .subscribe__form {
+        margin-bottom: 50px;
+        padding: 0;
+
+        flex-direction: column;
+    }
+
+    .subscribe__input, .subscribe__submit-button {
+        width: 100%;
+    }
+
+    .subscribe__input {
+        margin-bottom: 10px;
+    }
+
+    .subscribe__submit-button {
+        margin-left: 0;
+    }
 }

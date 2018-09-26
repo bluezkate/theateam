@@ -1,4 +1,5 @@
 .slider {
+    margin-top: -1px;
     margin-bottom: 110px;
 
     background-color: $yellow;
@@ -140,4 +141,54 @@
 
 .slider__radio:checked + .radio-indication {
     opacity: 1;
+}
+
+@media (max-width: 1023px) {
+
+    .slider__lorem-ipsum {
+        margin-bottom: 50px;
+        padding: 0 40px;
+
+
+        box-sizing: border-box;
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 767px) {
+
+    .slider {
+        margin-bottom: 70px;
+    }
+
+    .slider__item {
+        padding: 0;
+    }
+
+    .slider__heading {
+        margin-bottom: 30px;
+
+        font-size: 32px;
+    }
+
+    .slider__lorem-ipsum {
+        margin-bottom: 30px;
+        padding: 0px;
+    }
+
+    .platforms__list {
+        margin-bottom: 20px;
+
+        width: 220px;
+    }
+    
+
+    .platforms__item {
+
+        width: 60px;
+        height: 60px;
+    
+    }
+
 }

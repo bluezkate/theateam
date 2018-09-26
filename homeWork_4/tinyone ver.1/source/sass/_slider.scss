@@ -1,4 +1,5 @@
 .slider {
+    margin-top: -1px;
     margin-bottom: 110px;
 
     background-color: $yellow;
@@ -21,7 +22,7 @@
 }
 
 .slider__item {
-    padding: 0px 50px 0px 20px;
+    padding: 0px 30px 0px 10px;
     box-sizing: border-box;
 
     display: flex;
@@ -30,7 +31,7 @@
 }
 
 .slider__info {
-    padding-top: 65px;
+    padding-top: 70px;
 
     width: 400px;
 }
@@ -42,7 +43,7 @@
 
 .slider__heading {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     padding: 0;
 
     font-size: 32px;
@@ -50,7 +51,7 @@
 
 .slider__lead { 
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 21px;
 
     width: 310px;
 
@@ -60,10 +61,11 @@
 
 .slider__lorem-ipsum {
     display: block;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 
     color: #555555;
     font-size: 16px;
+    line-height: 20px;
 }
 
 .platforms__list {
@@ -134,9 +136,14 @@
     margin-left: 20px;
 }
 
+
+
+
+// Slider buttons styles
 .slider__buttons {
     margin: 0;
-    padding: 54px 0;
+    margin-right: 10px;
+    padding: 56px 0 53px;
 
     display: flex;
     justify-content: center;
@@ -180,19 +187,23 @@
 }
 
 
-@media (max-width: 959px) {
+@media (max-width: 1023px) {
 
     .slider__item {
-        padding-right: 10px;
+        padding-right: 0px;
     }
 
     .slider__img-wrapper {
-        margin-left: 35px;
+        margin-left: 45px;
     }
     
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
+
+    .slider {
+        margin-bottom: 90px;
+    }
 
     .slider__info, .slider__lead {
         width: 100%;
@@ -202,11 +213,19 @@
         padding: 20px 0;
     }
 
-    .slider__heading {
+    .slider__heading, .slider__lead {
         text-align: center;
     }
 
-    .slider__platforms {
+    .slider__heading {
+        margin-bottom: 30px;
+    }
+
+    .slider__lorem-ipsum {
+        text-align: justify;
+    }
+
+    .platforms__list {
         justify-content: center;
     }
 
@@ -221,7 +240,7 @@
     }
 
     .slider__buttons {
-        padding-right: 20px;
+        margin-right: 20px;
     }
     
 }

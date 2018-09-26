@@ -2,13 +2,13 @@ $yellow: #fcdb00;
 
 body {
     font-family: 'PT Sans', sans-serif;
-    box-sizing: border-box;
 }
 
 .container {
     width: 950px;
     padding: 0 10px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .visually-hidden {
@@ -22,19 +22,20 @@ body {
     overflow: hidden;
 }
 
-@media (max-width: 959px) {
+@media (max-width: 1023px) {
 
     .container {
-        width: 720px;
-        padding: 0 20px;
+        width: 768px;
+        padding: 0 24px;
     }
     
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
 
     .container {
-        width: 280px;
+        width: 320px;
+        padding: 0 20px;
     }
     
 }

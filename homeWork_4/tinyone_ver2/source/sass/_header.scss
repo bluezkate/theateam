@@ -62,17 +62,62 @@
 
     &_facebook {
         background-image: url('/img/social_facebook.png');
+        background-repeat: no-repeat;
     }
 
     &_twitter {
         background-image: url('/img/social_twitter.png');
+        background-repeat: no-repeat;
     }
 
     &_google {
         background-image: url('/img/social_google.png');
+        background-repeat: no-repeat;
     }
 
     &_pinterest {
         background-image: url('/img/social_pinterest.png');
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 1023px) {
+
+    .header .container {
+        padding: 0 20px 0 40px;
+    }
+
+    .header__icon-menu {
+        margin-right: 255px;
+    }
+    
+}
+
+@media (max-width: 767px) {
+
+    .header .container {
+        padding: 0 10px 0 20px;
+
+        flex-wrap: wrap;
+    }
+    
+    .header__icon-menu {
+        margin-right: 120px;
+        padding-bottom: 22px;
+    }
+
+    .header__logo {
+        margin-bottom: 30px;
+    }
+
+    .social {
+        flex-grow: 1;
+        width: 100%;
+
+        padding: 0 20px;
+    }
+
+    .social__list {
+        justify-content: space-around;
     }
 }
