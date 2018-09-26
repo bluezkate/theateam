@@ -1,155 +1,197 @@
-.flex {
-    padding: 19px;
-    padding-bottom: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+// Прошлая версия
+
+// .flex {
+//     padding: 19px;
+//     // padding-bottom: 0;
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
     
-    // // 2й вариант, менее правильный, но без обертки
-    // height: 864px;
-    // flex-direction: column;
-    // align-content: space-between;
+//     // // 2й вариант, менее правильный, но без обертки
+//     // height: 864px;
+//     // flex-direction: column;
+//     // align-content: space-between;
+    
+//     background-color: #f3f3f3;
+// }
+
+// .flex__element {
+//     width: 445px;
+//     position: relative;
+//     background-color: #ffffff;
+
+//     margin-bottom: 20px;
+
+//     &_anapa::before, &_sochi::before, &_gelenjic::before {
+//         position: absolute;
+//         content: '';
+
+//         width: 0; 
+//         height: 0; 
+
+//         right: 35px;
+//         top: -10px;
+//         border-width: 70px 37px 15px;
+//         border-style: solid;
+//     }
+
+//     &_anapa::before {
+//         border-color: #35c6fd #35c6fd transparent;
+//     }
+
+//     &_sochi::before {
+//         border-color: #f30543 #f30543 transparent;
+//     }
+
+//     &_gelenjic::before {
+//         border-color: #f00643 #f00643 transparent;
+//     }
+
+//     &_anapa::after, &_sochi::after, &_gelenjic::after {
+//         position: absolute;
+//         display: inline-block;
+//         width: 50px;
+        
+//         color: #ffffff;
+//         font-family: 'Roboto', serif;
+//         font-size: 11px;
+//         text-align: center;
+//         text-transform: uppercase;
+
+//         right: 46px;
+//     }
+
+    
+//     &_anapa::after {
+//         content: 'Хит продаж';
+
+//         top: 15px;
+//     }
+
+//     &_sochi::after {
+//         content: 'Акция';
+
+//         top: 22px;
+//     }
+
+//     &_gelenjic::after {
+//         content: 'Скидка 10%';
+
+//         top: 17px;
+//     }
+// }
+
+
+// .flex__heading {
+//     margin: 0;
+//     padding: 0;
+//     margin-bottom: 10px;
+
+//     font-family: 'Roboto Slab', serif;
+//     font-weight: 300;
+//     font-size: 15px;
+//     color: #2d92be;
+// }
+
+// .flex__details {
+//     padding: 20px 25px 30px;
+// }
+
+// .flex__trip-details {
+//     margin: 0;
+//     margin-bottom: 15px;
+
+//     font-family: 'Roboto', serif;
+//     font-weight: 300;
+//     font-size: 11px;
+//     color: #595b58;
+
+//     &_bold {
+//         font-weight: bold;
+//         color: #252f60;
+//     }
+// }
+
+// .flex__price {
+//     margin: 0;
+
+//     font-family: 'Roboto Slab', serif;
+//     font-size: 20px;
+//     color: #252f60;
+
+//     &_sale:before {
+//         content: '';
+//         display: inline-block;
+//         padding-left: 20px;
+
+//         font-size: 16px;
+//         text-decoration: line-through;
+//         color: #ececec;
+//     }
+// }
+
+// .flex__price-sale {
+//     position: relative;
+
+//     &_sochi:after, &_gelenjic:after{
+//         position: absolute;
+//         display: inline-block;
+
+//         font-size: 14px;
+//         text-decoration: line-through;
+//         color: #cccccc;
+
+//         top: 7px;
+//         left: 130px;
+//     }
+
+//     &_sochi:after {
+//         content: '15000 руб.'
+//     }
+
+//     &_gelenjic:after {
+//         content: '10000 руб.'
+//     }
+
+// }
+
+.flex {
+    height: 864px;    
+    padding: 19px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
     
     background-color: #f3f3f3;
 }
 
-.flex__element {
-    width: 445px;
-    position: relative;
-    background-color: #ffffff;
+.item {
+    width: 440px;
 
-    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: Roboto, serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
 
-    &_anapa::before, &_sochi::before, &_gelenjic::before {
-        position: absolute;
-        content: '';
+    &_big {
+        padding: 150px 0;
+        background: #F39D11;
 
-        width: 0; 
-        height: 0; 
-
-        right: 35px;
-        top: -10px;
-        border-width: 70px 37px 15px;
-        border-style: solid;
+        &:first-child {
+            padding: 220px 0;
+            
+            background: #E3E3B6;
+            color: #000000;
+        }
     }
 
-    &_anapa::before {
-        border-color: #35c6fd #35c6fd transparent;
+    &_small {
+        padding: 96px 0;
+        background: #51835D;
     }
-
-    &_sochi::before {
-        border-color: #f30543 #f30543 transparent;
-    }
-
-    &_gelenjic::before {
-        border-color: #f00643 #f00643 transparent;
-    }
-
-    &_anapa::after, &_sochi::after, &_gelenjic::after {
-        position: absolute;
-        display: inline-block;
-        width: 50px;
-        
-        color: #ffffff;
-        font-family: 'Roboto', serif;
-        font-size: 11px;
-        text-align: center;
-        text-transform: uppercase;
-
-        right: 46px;
-    }
-
-    
-    &_anapa::after {
-        content: 'Хит продаж';
-
-        top: 15px;
-    }
-
-    &_sochi::after {
-        content: 'Акция';
-
-        top: 22px;
-    }
-
-    &_gelenjic::after {
-        content: 'Скидка 10%';
-
-        top: 17px;
-    }
-}
-
-
-.flex__heading {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 10px;
-
-    font-family: 'Roboto Slab', serif;
-    font-weight: 300;
-    font-size: 15px;
-    color: #2d92be;
-}
-
-.flex__details {
-    padding: 20px 25px 30px;
-}
-
-.flex__trip-details {
-    margin: 0;
-    margin-bottom: 15px;
-
-    font-family: 'Roboto', serif;
-    font-weight: 300;
-    font-size: 11px;
-    color: #595b58;
-
-    &_bold {
-        font-weight: bold;
-        color: #252f60;
-    }
-}
-
-.flex__price {
-    margin: 0;
-
-    font-family: 'Roboto Slab', serif;
-    font-size: 20px;
-    color: #252f60;
-
-    &_sale:before {
-        content: '';
-        display: inline-block;
-        padding-left: 20px;
-
-        font-size: 16px;
-        text-decoration: line-through;
-        color: #ececec;
-    }
-}
-
-.flex__price-sale {
-    position: relative;
-
-    &_sochi:after, &_gelenjic:after{
-        position: absolute;
-        display: inline-block;
-
-        font-size: 14px;
-        text-decoration: line-through;
-        color: #cccccc;
-
-        top: 7px;
-        left: 130px;
-    }
-
-    &_sochi:after {
-        content: '15000 руб.'
-    }
-
-    &_gelenjic:after {
-        content: '10000 руб.'
-    }
-
 }
