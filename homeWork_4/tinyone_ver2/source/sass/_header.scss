@@ -50,36 +50,39 @@
 }
 
 .social__link {
-    margin-left: 20px;
+    display: block;
 
-    &:first-child {
-        margin-left: 0;
-    }
+    width: 100%;
+    height: 100%;
 }
 
 .social__item {
     width: 19px;
     height: 20px;
+
+    margin-right: 20px;
+
     background-size: 19px auto;
+    background-repeat: no-repeat;
+
+    &:last-child {
+        margin-right: 0;
+    }
 
     &_facebook {
         background-image: url('/img/header__social_facebook@1x.png');
-        background-repeat: no-repeat;
     }
 
     &_twitter {
         background-image: url('/img/header__social_twitter@1x.png');
-        background-repeat: no-repeat;
     }
 
     &_google {
         background-image: url('/img/header__social_google@1x.png');
-        background-repeat: no-repeat;
     }
 
     &_pinterest {
         background-image: url('/img/header__social_pinterest@1x.png');
-        background-repeat: no-repeat;
     }
 }
 
@@ -129,7 +132,7 @@
     
     .header__icon-menu {
         margin-right: 120px;
-        padding-bottom: 22px;
+        padding-bottom: 40px;
     }
 
     .header__logo {

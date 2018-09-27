@@ -1,11 +1,14 @@
 .features {
-    margin-bottom: 110px;
+    padding: 110px 0;
 }
 
 .features .container {
     padding: 0 10px 0 20px;
     box-sizing: border-box;
-    position: relative;
+}
+
+.features__text-wrapper {
+    margin-bottom: 120px;
 }
 
 .features__heading {
@@ -19,7 +22,7 @@
 
 .features__lorem-ipsum {
     margin: 0 auto;
-    margin-bottom: 120px;
+    
     padding: 0;
 
     width: 760px;
@@ -30,12 +33,24 @@
 
 }
 
+.features__list {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    position: relative;
+
+    list-style-type: none;
+}
+
 .features__img-wrapper {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -155px;
-    margin-top: -150px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 
     &::before {
         content: '';
@@ -58,33 +73,30 @@
         top: 225px;
         right: 82px;
 
-        color: #000000; 
+        color: $black; 
         font-size: 30px;
         font-weight: 700;
     }
 }
 
-.features__list {
-    margin: 0;
-    padding: 0;
-
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    flex-wrap: wrap;
-    max-height: 420px;
-
-    list-style-type: none;
-}
 
 .features__item {
     margin-bottom: 87px;
     box-sizing: border-box;
 
-    width: 220px;
+    width: 310px;
 
-    &:nth-child(1), &:nth-child(3) {
-        order: -1;
+    line-height: 22px;
+
+    &:nth-child(2n+1) {
+        align-self: flex-end;
+        padding-left: 60px;
+    }
+
+    &:nth-child(2n+2) {
+        align-self:  flex-start;
+        padding-right: 60px;
+        
     }
 }
 
@@ -110,35 +122,48 @@
     }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1023px) {   
 
     .features {
-        margin-bottom: 50px;
-    }    
+        padding-bottom: 40px;
+    }
 
     .features__lorem-ipsum {
-        margin-bottom: 600px;
         padding: 0 40px;
         box-sizing: border-box;
 
         width: 100%;
     }
 
-    .features__img-wrapper {
-        margin-top: -390px;
+    .features__text-wrapper {
+        margin-bottom: 550px;
     }
-    // Или скрыть айпад в принципе
+    
+    .features__img-wrapper {
+        transform: translate(-50%, -150%);
+    }
 
     .features__list {
         padding: 0 50px;
     }
+
+    .features__item {
+        &:nth-child(2n+1) {
+            text-align: right;
+        }
+    }
+    
     
 }
 
 @media (max-width: 767px) {
 
     .features {
-        margin-bottom: 50px;
+        padding-bottom: 80px;
+    }
+
+    .features__text-wrapper {
+        margin-bottom: 55px;
     }
 
     .features__heading {
@@ -146,7 +171,8 @@
     }
 
     .features__lorem-ipsum {
-        margin-bottom: 50px;
+        padding: 0 10px;
+        margin-bottom: 0px;
 
         font-size: 17px;
     }
@@ -157,14 +183,16 @@
 
     .features__list {
         padding: 0 35px;
-
-        max-height: none;
     }
 
     .features__item {
         margin-bottom: 50px;
 
         text-align: center;
+
+        &:nth-child(2n+1), &:nth-child(2n+2) {
+            padding: 0;
+        }
     }
     
 }
