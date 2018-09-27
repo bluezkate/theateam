@@ -1,0 +1,273 @@
+.slider {
+    margin-top: -1px;
+    margin-bottom: 110px;
+
+    background-color: $yellow;
+}
+
+
+.slider__wrapper {
+    overflow: hidden;
+}
+
+.slider__list {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    display: flex;
+    
+    transition: 1500ms cubic-bezier(.10, .10, .25, .90);
+}
+
+.slider__item {
+    padding: 0px 30px 0px 10px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+}
+
+.slider__info {
+    padding-top: 70px;
+
+    width: 400px;
+}
+
+.slider__text {
+    margin: 0;
+    padding: 0;
+}
+
+.slider__heading {
+    margin: 0;
+    margin-bottom: 18px;
+    padding: 0;
+
+    font-size: 32px;
+}
+
+.slider__lead { 
+    display: block;
+    margin-bottom: 21px;
+
+    width: 310px;
+
+    color: #313841;
+    font-size: 20px;
+}
+
+.slider__lorem-ipsum {
+    display: block;
+    margin-bottom: 40px;
+
+    color: #555555;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.platforms__list {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+
+    list-style-type: none;    
+}
+
+.platforms__item {
+
+    margin-right: 38px;
+
+    &_apple {
+        width: 33px;
+        height: 39px;
+
+        background-image: url('/img/platform_apple@1x.png');
+        background-size: 33px auto;
+    }
+
+    &_android {
+        width: 33px;
+        height: 39px;
+
+        background-image: url('/img/platform_android@1x.png');
+        background-size: 33px auto;
+    }
+
+    &_windows {
+        width: 39px;
+        height: 40px;
+
+        background-image: url('/img/platform_windows@1x.png');
+        background-size: 39px auto;
+    }
+}
+
+.slider__img-wrapper {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+
+        width: 43px;
+        height: 43px;
+
+        left: 103px;
+        top: 200px;
+
+        background-image: url('/img/logo_yellow@1x.png');
+        background-size: 43px auto;
+    }
+
+    &::after {
+        content: 'tinyone';
+        position: absolute;
+
+        top: 202px;
+        right: 82px;
+
+        color: $yellow; 
+        font-size: 30px;
+        font-weight: 700;
+    }
+}
+
+.slider__img {
+    margin-left: 20px;
+}
+
+
+
+
+// Slider buttons styles
+.slider__buttons {
+    margin: 0;
+    margin-right: 10px;
+    padding: 56px 0 53px;
+
+    display: flex;
+    justify-content: center;
+
+    list-style-type: none;
+
+    background-color: $yellow;
+}
+
+
+.slider__button {
+    margin-right: 15px;
+    padding-left: 5px;
+
+    position: relative;
+    cursor: pointer;
+}
+
+
+// Switching standart radio to new
+.slider__radio + .radio-indication {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+
+    top: -10px;
+    left: 15px;
+
+    border-radius: 10px; 
+    background-color: #ffffff;
+    opacity: 0.6;
+}
+
+.slider__radio:focus + .radio-indication {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.slider__radio:checked + .radio-indication {
+    opacity: 1;
+}
+
+@media (min-resolution: 2dppx) {
+
+    .platforms__item {
+    
+        &_apple {
+            background-image: url('/img/platform_apple@2x.png');
+        }
+    
+        &_android {
+            background-image: url('/img/platform_android@2x.png');
+        }
+    
+        &_windows {
+            background-image: url('/img/platform_windows@2x.png');
+        }
+    }
+
+
+    .slider__img-wrapper::before {
+        background-image: url('/img/logo_yellow@2x.png');
+    }
+}
+
+
+@media (max-width: 1023px) {
+
+    .slider__item {
+        padding-right: 0px;
+    }
+
+    .slider__img-wrapper {
+        margin-left: 45px;
+    }
+    
+}
+
+@media (max-width: 767px) {
+
+    .slider {
+        margin-bottom: 90px;
+    }
+
+    .slider__info, .slider__lead {
+        width: 100%;
+    }
+
+    .slider__info {
+        padding: 20px 0;
+    }
+
+    .slider__heading, .slider__lead {
+        text-align: center;
+    }
+
+    .slider__heading {
+        margin-bottom: 30px;
+    }
+
+    .slider__lorem-ipsum {
+        text-align: justify;
+    }
+
+    .platforms__list {
+        justify-content: center;
+    }
+
+    .platforms__item {
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .slider__img-wrapper {
+        display: none;
+    }
+
+    .slider__buttons {
+        margin-right: 20px;
+    }
+    
+}

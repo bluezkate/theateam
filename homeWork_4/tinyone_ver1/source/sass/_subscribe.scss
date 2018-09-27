@@ -1,0 +1,174 @@
+.subscribe {
+    padding: 90px 0 90px 0;
+
+    background-color: #000000;
+}
+
+.subscribe__heading {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+
+    color: $yellow;
+    font-size: 32px;
+    text-align: center;
+}
+
+.subscribe__lorem-ipsum {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 0 100px;
+
+    color: #898989;
+    font-size: 20px;
+    text-align: center;
+}
+
+.subscribe__form {
+    margin-bottom: 80px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe__input {
+    padding: 16px;
+    box-sizing: border-box;
+
+    width: 580px;
+    
+    border: none;
+    border-radius: 5px;
+}
+
+.subscribe__submit-button {
+    padding: 16px;
+    margin-left: 20px;
+
+    width: 127px;
+
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    background-color: $yellow;
+    border: none;
+    border-radius: 5px;
+}
+
+.social__list {
+    margin: 0;
+    margin-right: 15px;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+
+    list-style-type: none;
+}
+
+.social__item {
+    width: 36px;
+    height: 36px;
+    background-size: 36px auto;
+
+    &_facebook {
+        background-image: url('/img/subscribe__social_facebook@1x.png');
+    }
+
+    &_twitter {
+        background-image: url('/img/subscribe__social_twitter@1x.png');
+    }
+
+    &_google {
+        background-image: url('/img/subscribe__social_google@1x.png');
+    }
+
+    &_pinterest {
+        background-image: url('/img/subscribe__social_pinterest@1x.png');
+    }
+}
+
+.social__link {
+    margin-right: 32px;
+}
+
+@media (min-resolution: 2dppx) {
+    .social__item {
+    
+        &_facebook {
+            background-image: url('/img/subscribe__social_facebook@2x.png');
+        }
+    
+        &_twitter {
+            background-image: url('/img/subscribe__social_twitter@2x.png');
+        }
+    
+        &_google {
+            background-image: url('/img/subscribe__social_google@2x.png');
+        }
+    
+        &_pinterest {
+            background-image: url('/img/subscribe__social_pinterest@2x.png');
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+
+    .subscribe {
+        padding-bottom: 30px;
+    }
+
+    .subscribe__form {
+        padding: 0 45px;
+    }
+
+    .social__list {
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .subscribe__heading {
+        margin-bottom: 30px;
+        padding: 0 30px;
+    }
+
+    .subscribe__lorem-ipsum {
+        padding: 0;
+    }
+
+    .subscribe__form {
+        margin-bottom: 50px;
+        padding: 0;
+
+        flex-direction: column;
+    }
+
+    .subscribe__input, .subscribe__submit-button {
+        width: 100%;
+    }
+
+    .subscribe__input {
+        margin-bottom: 10px;
+    }
+
+    .subscribe__submit-button {
+        margin-left: 0;
+    }
+
+    .social__list {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .social__link {
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+}
