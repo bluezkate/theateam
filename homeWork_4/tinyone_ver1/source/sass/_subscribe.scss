@@ -1,7 +1,11 @@
 .subscribe {
     padding: 90px 0 90px 0;
 
-    background-color: #000000;
+    background-color: $black;
+}
+
+.subscribe__text-wrapper {
+    margin-bottom: 40px;
 }
 
 .subscribe__heading {
@@ -16,7 +20,7 @@
 
 .subscribe__lorem-ipsum {
     margin: 0 auto;
-    margin-bottom: 40px;
+    
     padding: 0 100px;
 
     color: #898989;
@@ -25,10 +29,11 @@
 }
 
 .subscribe__form {
+    padding: 0 100px;
     margin-bottom: 80px;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .subscribe__input {
@@ -43,7 +48,6 @@
 
 .subscribe__submit-button {
     padding: 16px;
-    margin-left: 20px;
 
     width: 127px;
 
@@ -68,6 +72,8 @@
 }
 
 .social__item {
+    margin-right: 32px;
+
     width: 36px;
     height: 36px;
     background-size: 36px auto;
@@ -90,7 +96,9 @@
 }
 
 .social__link {
-    margin-right: 32px;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 @media (min-resolution: 2dppx) {
@@ -122,6 +130,10 @@
 
     .subscribe__form {
         padding: 0 45px;
+    }
+
+    .subscribe__input {
+        width: 480px;
     }
 
     .social__list {

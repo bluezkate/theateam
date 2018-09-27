@@ -1,7 +1,15 @@
 $yellow: #fcdb00;
+$white: #ffffff;
+$black: #000000;
+
+*{
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.15;
 }
 
 .container {

@@ -125,11 +125,11 @@
 
         <section class="features">
             <div class="container">
-
-                <h2 class="features__heading">Tinyone features</h2>
-                <p class="features__lorem-ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
-                
-                <ul class="features__list">
+                <div class="features__text-wrapper">
+                   <h2 class="features__heading">Tinyone features</h2>
+                    <p class="features__lorem-ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.</p> 
+                </div> 
+                <ul class="features__list features__list_overline">
                     <li class="features__item features__item_mobile">
                         <span class="features__title">Fully Responsive</span>
                         <span class="features__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</span>
@@ -161,27 +161,37 @@
 
         <section class="subscribe">
             <div class="container">
-                <h2 class="subscribe__heading">Keep in touch with us</h2>
-                <p class="subscribe__lorem-ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
+                <div class="subscribe__text-wrapper">
+                    <h2 class="subscribe__heading">Keep in touch with us</h2>
+                    <p class="subscribe__lorem-ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
+                </div>
                 <div class="subscribe__form">
                     <input type="text" placeholder="Enter your email to update" class="subscribe__input">
                     <button type="button" class="subscribe__submit-button">Submit</button>
                 </div>
                 
                 <div class="subscribe__social social">
-                    <ul class="social__list">
-                        <a href="#" class="social__link">
-                            <li class="social__item social__item_facebook"><span class="visually-hidden">Facebook</span></li>
-                        </a>
-                        <a href="#" class="social__link">
-                            <li class="social__item social__item_twitter"><span class="visually-hidden">Twitter</span></li>
-                        </a>
-                        <a href="#" class="social__link">
-                            <li class="social__item social__item_google"><span class="visually-hidden">Google Plus</span></li>
-                        </a>
-                        <a href="#" class="social__link">
-                            <li class="social__item social__item_pinterest"><span class="visually-hidden">Pinterest</span></li>
-                        </a> 
+                    <ul class="social__list"> 
+                        <li class="social__item social__item_facebook">
+                            <a href="#" class="social__link">
+                                <span class="visually-hidden">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="social__item social__item_twitter">
+                            <a href="#" class="social__link">
+                                <span class="visually-hidden">Twitter</span>
+                            </a>
+                        </li>
+                        <li class="social__item social__item_google">
+                            <a href="#" class="social__link">
+                                <span class="visually-hidden">Google Plus</span>
+                            </a>
+                        </li>
+                        <li class="social__item social__item_pinterest">
+                            <a href="#" class="social__link">
+                                <span class="visually-hidden">Pinterest</span>
+                            </a> 
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -198,19 +208,35 @@
                 <span class="footer__adress-data">contact@halovietnam.com</span>
                 <span class="footer__adress-data">+844 35149182</span>
             </p>
-            <ul class="footer__list">
-                <li class="footer__item"><a href="" class="footer__link">Examples</a></li>
-                <li class="footer__item"><a href="" class="footer__link">Contact</a></li>
-                <li class="footer__item"><a href="" class="footer__link">Download</a></li>
-                <li class="footer__item"><a href="" class="footer__link">Media</a></li>
-                <li class="footer__item"><a href="" class="footer__link">Shop</a></li>
-                <li class="footer__item"><a href="" class="footer__link">About</a></li>
-                <li class="footer__item"><a href="" class="footer__link">Support</a></li>
-                <li class="footer__item"><a href="" class="footer__link">Blog</a></li>
-                <li class="footer__item"><a href="" class="footer__link">License</a></li>
-                <li class="footer__item"><a href="" class="footer__link">Privacy Terms</a></li>
-                <li class="footer__item"><a href="" class="footer__link">Documents</a></li>
-                <li class="footer__item"><a href="" class="footer__link">Forums</a></li>
+            <ul class="footer__main-list">
+                <li class="footer__main-item">
+                    <ul class="footer__column-list">
+                        <li class="footer__column-item"><a href="" class="footer__link">Examples</a></li>
+                        <li class="footer__column-item"><a href="" class="footer__link">Shop</a></li>
+                        <li class="footer__column-item"><a href="" class="footer__link">License</a></li>
+                    </ul>
+                </li>
+                <li class="footer__main-item">
+                    <ul class="footer__column-list">
+                        <li class="footer__column-item"><a href="" class="footer__link">Contact</a></li>
+                        <li class="footer__column-item"><a href="" class="footer__link">About</a></li>
+                        <li class="footer__column-item"><a href="" class="footer__link">Privacy Terms</a></li>
+                    </ul>
+                </li>
+                <li class="footer__main-item">
+                    <ul class="footer__column-list">
+                        <li class="footer__column-item"><a href="" class="footer__link">Download</a></li>
+                        <li class="footer__column-item"><a href="" class="footer__link">Support</a></li>
+                        <li class="footer__column-item"><a href="" class="footer__link">Documents</a></li>
+                    </ul>
+                </li>
+                <li class="footer__main-item">
+                    <ul class="footer__column-list">
+                        <li class="footer__column-item"><a href="" class="footer__link">Media</a></li>
+                        <li class="footer__column-item"><a href="" class="footer__link">Blog</a></li>
+                        <li class="footer__column-item"><a href="" class="footer__link">Forums</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </footer>

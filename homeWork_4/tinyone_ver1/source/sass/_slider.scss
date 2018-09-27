@@ -1,6 +1,5 @@
 .slider {
     margin-top: -1px;
-    margin-bottom: 110px;
 
     background-color: $yellow;
 }
@@ -81,6 +80,10 @@
 
     margin-right: 38px;
 
+    &:last-child {
+        margin-right: 0;
+    }
+
     &_apple {
         width: 33px;
         height: 39px;
@@ -116,7 +119,7 @@
         width: 43px;
         height: 43px;
 
-        left: 103px;
+        left: 83px;
         top: 200px;
 
         background-image: url('/img/logo_yellow@1x.png');
@@ -136,17 +139,11 @@
     }
 }
 
-.slider__img {
-    margin-left: 20px;
-}
-
-
 
 
 // Slider buttons styles
 .slider__buttons {
     margin: 0;
-    margin-right: 10px;
     padding: 56px 0 53px;
 
     display: flex;
@@ -159,11 +156,15 @@
 
 
 .slider__button {
-    margin-right: 15px;
-    padding-left: 5px;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
 
     position: relative;
-    cursor: pointer;
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 
@@ -173,12 +174,11 @@
     width: 13px;
     height: 13px;
 
-    top: -10px;
-    left: 15px;
-
     border-radius: 10px; 
     background-color: #ffffff;
     opacity: 0.6;
+    
+     cursor: pointer;
 }
 
 .slider__radio:focus + .radio-indication {
@@ -228,10 +228,6 @@
 
 @media (max-width: 767px) {
 
-    .slider {
-        margin-bottom: 90px;
-    }
-
     .slider__info, .slider__lead {
         width: 100%;
     }
@@ -264,10 +260,6 @@
 
     .slider__img-wrapper {
         display: none;
-    }
-
-    .slider__buttons {
-        margin-right: 20px;
     }
     
 }
