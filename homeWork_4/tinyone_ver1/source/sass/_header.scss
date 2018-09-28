@@ -70,8 +70,31 @@
 
 @media (max-width: 767px) {
 
+    .header .container {
+        position: relative;
+        padding: 0 20px 0 30px;
+    }
+
     .header__nav {
         display: none;
+        position: absolute;
+        z-index: 3;
+        background-color: $yellow;
+
+        top: 70px;
+    }
+
+    .nav__list {
+        padding: 0;
+        flex-direction: column;
+        width: 260px;
+    }
+
+    .nav__item {
+        padding: 10px 0;
+        margin-right: 0;
+        
+        text-align: center;
     }
 
     .header__menu-link {

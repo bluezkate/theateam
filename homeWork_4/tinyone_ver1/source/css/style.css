@@ -104,8 +104,27 @@ body {
     padding: 0px 20px 0px 40px; } }
 
 @media (max-width: 767px) {
+  .header .container {
+    position: relative;
+    padding: 0 20px 0 30px; }
   .header__nav {
-    display: none; }
+    display: none;
+    position: absolute;
+    z-index: 3;
+    background-color: #fcdb00;
+    top: 70px; }
+  .nav__list {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 260px; }
+  .nav__item {
+    padding: 10px 0;
+    margin-right: 0;
+    text-align: center; }
   .header__menu-link {
     position: relative;
     display: block; }

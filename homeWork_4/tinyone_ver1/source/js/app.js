@@ -1,44 +1,33 @@
-const   firstSlide = document.getElementById('firstSlide'),
+const   menuMobileButton = document.getElementById('menuMobileButton'),
+        menuMobile = document.querySelector('.header__nav'),
+        firstSlide = document.getElementById('firstSlide'),
         secondSlide = document.getElementById('secondSlide'),
         thirdSlide = document.getElementById('thirdSlide'),
-        sliderList = document.getElementById('sliderList');
+        sliderList = document.getElementById('sliderList'),
+        sliderWidth = document.querySelector('.slider__item').offsetWidth;
+        // при записи значения ширины слайда в переменную требуется перезагрузка страницы для правильной работы в адаптиве
+        // запись значения в саму функцию слишком "грязная" 
+        
 
+menuMobileButton.addEventListener('click', showHideMobileMenu);
 firstSlide.addEventListener('click', changeToFirstSlide);
 secondSlide.addEventListener('click', changeToSecondSlide);
 thirdSlide.addEventListener('click', changeToThirdSlide);
+
+function showHideMobileMenu () {
+    if (menuMobile.style.display != "block") {
+        menuMobile.style.display = "block";
+    } else menuMobile.style.display = "none";
+}
 
 function changeToFirstSlide () {
     sliderList.style.transform="translateX(0px)";
 }
 
 function changeToSecondSlide () {
-    switch (true) {
-        case (document.body.offsetWidth > 1023):
-            sliderList.style.transform="translateX(-930px)";
-            break;
-        case (document.body.offsetWidth > 767):
-            sliderList.style.transform="translateX(-720px)";
-            break;
-        case (document.body.offsetWidth > 0):
-            sliderList.style.transform="translateX(-280px)";
-            break; 
-        default:
-            sliderList.style.transform="translateX(-930px)";
-    }
+    sliderList.style.transform=`translateX(-${sliderWidth}px)`;
 }
 
 function changeToThirdSlide () {
-    switch (true) {
-        case (document.body.offsetWidth > 1023):
-            sliderList.style.transform="translateX(-1860px)";
-            break;
-        case (document.body.offsetWidth > 767):
-            sliderList.style.transform="translateX(-1440px)";
-            break;
-        case (document.body.offsetWidth > 0):
-            sliderList.style.transform="translateX(-560px)";
-            break; 
-        default:
-            sliderList.style.transform="translateX(-1860px)";
-    }
+    sliderList.style.transform=`translateX(-${ 2 * sliderWidth }px)`;
 }
